@@ -52,7 +52,7 @@ def get_pet_labels(image_dir):
         pet_labels.append(pet_name)
 
     results_dic = dict()
-    items_in_dic = len(results_dic)
+    items_in_dic = len(pet_labels)
     for item in range(0,items_in_dic,1):
         if filename_list[item] not in results_dic:
             results_dic[filename_list[item]] = pet_labels[item]
@@ -62,3 +62,5 @@ def get_pet_labels(image_dir):
     # Replace None with the results_dic dictionary that you created with this
     # function
     return results_dic
+
+print(get_pet_labels("Macintosh HD⁩/⁨Users/⁨adamkahn/⁨Documents/⁨AICoursePY/⁨Proj_1_Image_Classifier/pet_images⁩"))
