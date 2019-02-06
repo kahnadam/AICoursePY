@@ -4,7 +4,7 @@
 #
 # PROGRAMMER: Adam K.
 # DATE CREATED: February 5, 2019
-# REVISED DATE:
+# REVISED DATE: February 6, 2019
 # PURPOSE: Create a function classify_images that uses the classifier function
 #          to create the classifier labels and then compares the classifier
 #          labels to the pet image labels. This function inputs:
@@ -103,8 +103,7 @@ def classify_images(images_dir, results_dic, model):
        # as an exact match to on of the terms in the list - then they are added to
        # results_dic as an exact match(1) using extend list function
        if truth in model_label:
-            print("truth: {}, model_label: {}".format(truth, model_label))
-            results_dic[key].extend( (model_label, 1) )
+            results_dic[key].extend((model_label, 1))
 
        # TODO: 3d. REPLACE pass BELOW with CODE that uses the extend list function
        #           to add the classifier label (model_label) and the value of
@@ -115,6 +114,6 @@ def classify_images(images_dir, results_dic, model):
        # if not found then added to results dictionary as NOT a match(0) using
        # the extend function
        else:
-           results_dic[key].extend( (model_label, 0) )
+           results_dic[key].extend((model_label, 0))
 
-    print(results_dic)
+print(classify_images("/home/workspace/pet_images", results_dic, "vgg"))
