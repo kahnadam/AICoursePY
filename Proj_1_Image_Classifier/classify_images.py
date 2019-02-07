@@ -115,5 +115,3 @@ def classify_images(images_dir, results_dic, model):
        # the extend function
        else:
            results_dic[key].extend((model_label, 0))
-
-    print(classify_images("/home/workspace/pet_images", results_dic, "vgg"))
