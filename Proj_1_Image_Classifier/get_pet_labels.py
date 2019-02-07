@@ -55,7 +55,7 @@ def get_pet_labels(image_dir):
     items_in_dic = len(pet_labels)
     for item in range(0,items_in_dic,1):
         if filename_list[item] not in results_dic:
-            results_dic[filename_list[item]] = pet_labels[item]
+            results_dic[filename_list[item]] = [pet_labels[item]]
         else:
             print("**Warning: Key=", filename_list[item], " already exists in results_dic with value=", results_dic[filename_list[item]])
 
