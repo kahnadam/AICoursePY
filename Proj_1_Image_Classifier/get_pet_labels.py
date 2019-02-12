@@ -40,7 +40,7 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
-    filename_list = listdir("pet_images/")
+    filename_list = listdir(image_dir)
     pet_labels = []
     for item in filename_list:
         label = item.split("_")
@@ -62,5 +62,3 @@ def get_pet_labels(image_dir):
     # Replace None with the results_dic dictionary that you created with this
     # function
     return results_dic
-
-print(get_pet_labels("Macintosh HD⁩/⁨Users/⁨adamkahn/⁨Documents/⁨AICoursePY/⁨Proj_1_Image_Classifier/pet_images⁩"))
