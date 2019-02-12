@@ -39,7 +39,7 @@ def get_pet_labels(image_dir):
       results_dic - Dictionary with 'key' as image filename and 'value' as a
       List. The list contains for following item:
          index 0 = pet image label (string)
-"""
+    """
     # Creates list of files in directory
     in_files = listdir(image_dir)
 
